@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APE122</title>
+    <script>
+        function SPEEDRATE() {
+            let D = parseFloat(document.getElementById("D").value);
+            let n = parseFloat(document.getElementById("n").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("SPEEDRATE").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function FEEDRATE() {
+            let fz = parseFloat(document.getElementById("FEED PER TOOTH").value);
+            let Zn = parseFloat(document.getElementById("NUMBER OF TEETH").value);
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let Vf = (fz * Zn *n1);
+            document.getElementById("FEED RATE").value = Vf.toFixed(3);
+        }
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .Calculator{
+            width: 350px;
+            height: 350px;
+            border: 10px solid rgb(9, 241, 191);
+            border-radius: 20px;
+            background-color:  rgb(255, 255, 255);
+            padding: 15px;
+            margin: 20px;
+            font-family:sans-serif;
+        }
+        .Calculator h1{
+            text-align: center;
+        }
+        .Calculator input{
+            background-color: rgb(206, 49, 49);
+            border-radius:20px;
+            height: 20px;
+        }
+        .Calculator button{
+            background-color: rgb(0, 255, 55);
+            padding: 13px;
+        }
+        h1{
+            font-size: 20px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        h2{
+            font-size: 50px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color:rgb(255, 0, 0);
+
+        }
+        h4{
+            font-size: 22px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: auto;
+            margin-right: auto;
+            width: 110pc;
+            color: rgb(255, 255, 255);
+        }
+        body{
+            background-color: rgb(165, 109, 255);
+        }
+
+        input{
+            margin: 10px;
+        }
+        img{
+            border-radius: 30px;
+            padding: 5px;    
+        }
+    </style>    
+</head>
+<body>
+    <div>
+        <h2><r><u>Speed and feedrate</u></r>
+        </h2> 
+      </div>
+    <center><img src="Cutting tool.jpg"  width="700" height="400"></center></div>
+    
+    
+    <div class="h4">  
+        <h4>&gt; &gt; &gt;&nbsp;&nbsp;การใช้งานของเครื่อง CNC นั้นเพื่อให้เกิดประสิทธิภาพสูงสุดในขณะที่ลดการสูญเสียของดอกกัดและชิ้นงานมากที่สุดจึงจำเป็นต้องมีการคำนวณความเร็วของหัวกัดและความเร็วขณะเดินงานที่เหมาะสมโดยที่การคำนวณต่างๆนั้นจะขึ้นอยู่กับขนาดของดอกกัด, ประเภทของดอกกัด, วัตถุดิบที่จะกัดงาน และกำลังของหัวกัดด้วยการคำนวณนั้นสามารถทำได้ง่ายๆโดยใช้สูตรคำนวณดังนี้<br>ความเร็วหัวกัด (RPM)  = (SFM x 304.8) / (Tool Dia x 3.142)
+        ความเร็วฟีด (Feedrate mm/min) = (Feed per tooth) x จำนวนฟันของดอกกัด x ความเร็วหัวกัด (RPM)</h4>
+    </div>  
+     
+  <div class="container">
+    <!-- SPEED RATE -->
+    <div class="Calculator">
+        <h1><u>SPEED RATE</u></h1>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label>
+        <br>
+        <input type="text" name="" id="n" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Cutter Diameter (D) (D)</label>
+        <br>
+        <input type="text" name="" id="D" size=""> (mm)
+        <br>
+        <label for="" style="margin-left: 20px;">Speed Rate (Vc)</label>
+        <br>
+        <input type="text" name="" id="Speed Rate " size=""> (m/min)
+        <br>
+        <button onclick="SPEEDRATE()">ENTER</button>
+    </div>
+    <!-- FEED RATE -->
+    <div class="Calculator">
+        <h1><u>FEED RATE</u></h1>
+        <label for="" style="margin-left: 20px;">Feed Per Tooth (fz)</label>
+        <br>
+        <input type="text" name="" id="Feed Per Tooth" size=""> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 20px;">Number Of Teeth (z)</label>
+        <br>
+        <input type="text" name="" id="Number Of Teeth" size="">
+        <br>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label>
+        <br>
+        <input type="text" name="" id="n1" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Feed Rate (Vf)</label>
+        <br>
+        <input type="text" name="" id="Feed Rate " size=""> (mm/min)
+        <br>
+        <button class="botton2" onclick="FEEDRATE()">ENTER</button>
+    </div>
+  </div>
+        
+</body>
+<img src="name_kmutt.png" style="float:right" alt="name_kmutt">
+<img src="KMUTT.png" style="float:right"alt="KMUTT">
+</html>

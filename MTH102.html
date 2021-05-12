@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTH102</title>
+    <style>
+        .TriArea {
+            width: 350px;
+            height: 380px;
+            border: 10px solid rgb(12, 236, 207);
+            border-radius: 50px;
+            background-color: rgb(177, 241, 250);
+            padding: 20px;
+            margin: auto;
+            font-family:arial;
+            box-shadow:10px 10px 30px rgb(77, 240, 145) ;
+        }
+        body{
+            background-color: rgb(235, 225, 141);
+        }
+        h1{
+            text-align: center;
+            color: rgb(216, 12, 243);
+            font-size: 40px;
+            text-shadow:3px 5px 5px rgb(235, 80, 132);
+        }
+        h2{
+            color: rgb(224, 114, 40);
+            text-shadow:2px 2px 4px rgb(8, 238, 66);
+        }
+        hr{
+            box-shadow:5px 3px 5px #07f7eb ;
+        }
+        input{
+            background-color: rgb(255, 255, 255);
+            border-radius:20px;
+            height: 30px;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        p{
+            color: rgb(216, 12, 243);
+            font-size: 30px;
+            text-shadow:3px 5px 5px rgb(235, 80, 132);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="TriArea">
+        <h1>Triangle Area</h1>
+        <hr size="3px" noshade="" , color="#254626">
+        <h2>Base:</h2>
+        <input type="text" name="" id="base" value="10">
+        <h2>Height:</h2>
+        <input type="text" name="" id="height" value="10">
+        <p id="result"></p>
+        <script>
+            let b = document.getElementById("base");
+            let h = document.getElementById("height");
+            let area = document.getElementById("result");
+            b.addEventListener("input", triArea);
+            h.addEventListener("input", triArea);
+            function triArea(){
+                let base = parseFloat(b.value);
+                let height = parseFloat(h.value);
+                area.innerHTML = `The triangle area is ${(0.5 * base * height).toFixed(2)}`
+            }
+        </script>
+    </div>
+    <img src="name_kmutt.png" style="float:right" alt="name_kmutt">
+    <img src="KMUTT.png" style="float:right"alt="KMUTT">
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APE112</title>
+    <body bgcolor="#FFFFCC	"></body>
+    <style>
+        .header {
+        background: tomato;
+            height: 120px;
+            text-align: center;
+        }
+        .main p {
+            text-align: center;
+        }
+        .main {
+            text-align: center;
+            background: lightgreen;
+            font-size: 20px;
+        }
+        .footer {
+            background: deepskyblue;
+            text-align: center;
+            height: 80px;
+        }
+        .aside1 {
+            background: gold;
+        }
+        .aside2 {
+            background: hotpink;
+        }
+        .container * {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            flex-basis: 100%;
+            flex-grow: 1;
+        }
+        .container {
+            display: flex;
+            flex-flow: wrap;
+        }
+        @media all and (min-width:800px) {
+            .main {
+                flex: 3;
+                order: 2;
+            }
+            .aside1 {
+                order: 1;
+            }
+            .aside2 {
+                order: 3;
+            }
+            .footer {
+                order: 4;
+            }
+        }
+        @media all and (min-width:600px) {
+            .aside {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TPS 4 STEP</h1>
+        </div>
+    <div class="footer">
+            <h1>Toyota Production System TPS (SMEs)</h1>
+            <img src="name_kmutt.png" style="float:right" alt="name_kmutt">
+            <img src="KMUTT.png" style="float:right"alt="KMUTT">
+    </div>
+    <div class="main">
+        <h1 style="background-color: rgb(209, 37, 186); color: white;">TPS 4 STEBs</h1>
+        <p>Step1. Work Site Control<br>Step2. Continuous Flow<br>Step3. Standardized Work<br>Step4. Pull System </p>
+        <h4 style="background: rgba(19, 19, 221, 0.623); color:white;">Production System TPS (SMEs)</h4>
+        
+    </div>
+    <div class="aside1 aside">
+        <p>1.Work Site Control คือการทำมห้สถานที่ทำงานอยู่ในสภาพที่ได้รับการควบคุมดูแล<br>2.Continuous Flow คือการผลิตแบบที่ละชิ้นที่ละชิ้นให้งานไหลอย่างราบรื่นโดยไม่หยุดซะงัก</br></p>
+    </div>
+    <div class="aside2 aside">
+            <p>3.Standardized Work คือมาตรฐานที่ใช้ในการผลิตโดยรวบรวมการเคลื่ยนไหวของ คนเป็นหลัก เพื่อให้มีวิธีการผลิตอย่างมีประสิทธิภาพมากที่สุดตามลำดับ<br>4.Pull System คือการผลิตแบบดึง งานจากการบวนการก่อนหน้าเพื่อมาผลิตในกระบวนการของตัวเองและวางงาน ที่ทำเสร็จไว้ท้ายกระบวนการ</br></p>
+    </div>
+        
+</body>
+</html>

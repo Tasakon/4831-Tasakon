@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHY104</title><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script>
+        function c2f() {
+            let c = document.getElementById("cel").value;
+            let f = c * 9 / 5 + 32;
+            document.getElementById("fah").value = f.toFixed(2);
+
+        }
+    </script>
+    <style>
+        
+        
+        .head{
+            font-size: 100px;
+            text-shadow: white 8px 5px 10px;
+            font-family: 'Itim', cursive;
+            text-align: center;
+            padding: 30px 30px;
+            margin: 50px 50px;
+            background: rgb(141, 241, 27);
+            border-radius: 10px;
+        }
+        h2{
+            margin-left: auto;
+            margin-right: auto;
+            width: 110pc;
+            font-size: 35px;
+            font-family: 'Itim', cursive;
+        }
+            
+        
+        
+        .tempConversion {
+            width: 500px;
+            height: 400px;
+            border: 5px solid rgb(7, 247, 195);
+            border-radius: 20px;
+            background-color: rgb(167, 255, 25);
+            padding: 20px;
+            text-align: center;
+            font-family: monospace;
+            margin: 20px;
+
+        }
+        .tempConversion h4 {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Itim', cursive;
+            color: rgb(243, 8, 47);
+            text-decoration-line: underline;
+        }
+        .tempConversion input {
+            background-color: rgb(234, 240, 222);
+            font-size: 22px;
+        }
+        .tempConversion button {
+            background-color: pink;
+            font-size: 20px;
+        }
+        .tempConversion select {
+            background-color: plum;
+        }
+        .tempConversion label {
+            font-size: 30px;
+            font-family: 'Itim', cursive;
+        }
+        img{
+            border-radius: 50px;     
+          
+                   
+        }
+        .container {
+        position: relative;
+        width: 50%;
+        }
+
+        .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        }
+
+        .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        background-color: #9b00ba;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+        }   
+
+        .container:hover .overlay {
+        width: 100%;
+        left: 0;
+        }
+        .text {
+        white-space: nowrap; 
+        color: white;
+        font-size: 100px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+
+        }
+        
+
+    </style>
+</head>
+<body bgcolor="#FFFFA">
+    <div class="head">
+        PHY 104   
+    </div>
+    <center><div class="container"> 
+   <img src="tem.jpg" alt="tem" class="image">
+    <div class="overlay">
+    <div class="text">temparature</div></center>
+  </div>
+</div><br>
+    <h2>อุณหภูมิ (temperature) คือ ปริมาณทางฟิสิกส์ที่บ่งชี้ระดับความร้อนหรือเย็นของสสาร เป็นตัวแปรที่สำคัญมากที่สุดตัวแปรหนึ่ง
+        ในกระบวนการแปรรูปอาหาร (food processing) ซึ่งส่งผลโดยตรงทั้งต่อคุณภาพอาหาร (food quality) และต้นทุนการผลิต โดยเฉพาะ
+        อย่างยิ่งสำหรับอาหารที่เสื่อมเสียง่าย (perishable food) การควบคุมอุณหภูมิให้คงที่และเหมาะสมมีบทบาทตั้งแต่การขนส่ง (transportation)
+        การเก็บวัตถุดิบ (raw material) การเตรียมวัตถุดิบ (raw material preparation) การแปรรูปผลิตภัณฑ์ (food processing) และ
+        การจัดเก็บรักษาผลิตภัณฑ์ (storage) การเปลี่ยนแปลงอุณหภูมิของสสารในระหว่างกระบวนการแปรรูปจะส่งผลต่อการเปลี่ยนแปลง
+        ปริมาณทางฟิสิกส์ของตัวแปรอื่น เช่น การเปลี่ยนแปลงความดัน (pressure) และการไหล (flow) เป็นต้น</h2>
+        <h2>หน่วยของอุณหภูมิที่สำคัญและใช้ในปัจจุบัน ได้แก่ องศาเซลเซียส (Celcius, oC) องศาฟาเรนไฮต์ (Fahrenheit, oF) และเคลวิน (Kelvin, K)
+            ความสัมพันธ์ระหว่างหน่วยของอุณหภูมิแบบต่าง ๆ </h2>
+            <br><br>
+    <center><div class="tempConversion">
+        <h4>Temperature Conversion</h4>
+        <label for="">Celcius(&#8451;)</label> <br>
+        <input type="text" name="" id="cel" size="30"><br><br>
+        <button onclick="c2f()">&#8451; to &#8457;</button> <br> <br>
+
+        <label for="">Fahrenheit(&#8457;)</label> <br>
+        <input type="text" name="" id="fah" size="30">
+        
+    </center></div>
+    
+</body>
+</html>
+<body1><img src="name_kmutt.png" style="float:right" alt="name_kmutt">
+<img src="KMUTT.png" style="float:right"alt="KMUTT"></body1>
